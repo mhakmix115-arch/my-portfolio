@@ -646,6 +646,78 @@ footer{
   font-size:12px;
   padding:20px 5px 5px;
 }
+ /* تحسين مظهر الصفحة على الجوال */
+@media (max-width: 768px){
+
+  .app{
+    width:100%;
+    display:block;
+  }
+
+  .sidebar{
+    position:fixed;
+    top:0;
+    right:-260px;
+    width:235px;
+    height:100vh;
+    z-index:1000;
+    transition:.3s;
+  }
+
+  .sidebar.open{
+    right:0;
+  }
+
+  .main{
+    width:100%;
+    margin:0;
+    padding:18px 14px;
+  }
+
+  .logo-slot img{
+    max-width:130px;
+    height:100px;
+    object-fit:contain;
+    display:block;
+    margin:auto;
+  }
+
+  .children-wrap{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:20px auto;
+  }
+
+  .children-wrap img{
+    max-width:260px;
+    width:75%;
+    height:auto;
+    object-fit:contain;
+    display:block;
+    margin:auto;
+  }
+
+  .hero{
+    text-align:center;
+    margin:auto;
+  }
+
+  .hero h1,
+  .title{
+    text-align:center;
+  }
+
+  .info{
+    width:100%;
+    max-width:500px;
+    margin:15px auto;
+  }
+
+  img{
+    max-width:100%;
+  }
+}
 </style>
 </head>
 
