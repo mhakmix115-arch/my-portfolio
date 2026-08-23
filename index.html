@@ -786,15 +786,44 @@ footer{
 </head>
 
 <body>
-<div id="welcomeCover" style="position:fixed;inset:0;background:#f8f1e5;z-index:99999;overflow-y:auto;text-align:center;">
+<div id="welcomeCover" style="
+position:fixed;
+inset:0;
+z-index:99999;
+background:#f8f1e5;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+">
+
   <img src="69C62D99-3CF3-475B-A95D-FD9BEA2B21A0.png"
-       style="width:100%;max-width:768px;height:auto;display:block;margin:0 auto;"
-       alt="ملف الإنجاز المهني">
+       alt="ملف الإنجاز المهني"
+       style="
+       width:100%;
+       height:100%;
+       object-fit:cover;
+       display:block;
+       ">
 
   <button onclick="document.getElementById('welcomeCover').style.display='none';"
-          style="margin:18px auto 35px;padding:13px 35px;border:0;border-radius:30px;background:#075b45;color:white;font-size:18px;font-family:inherit;">
+          style="
+          position:absolute;
+          bottom:24px;
+          left:50%;
+          transform:translateX(-50%);
+          padding:14px 34px;
+          border:none;
+          border-radius:30px;
+          background:#075b45;
+          color:white;
+          font-size:18px;
+          font-family:inherit;
+          box-shadow:0 6px 18px rgba(0,0,0,.18);
+          ">
     الدخول إلى ملف الإنجاز
   </button>
+
 </div>
 <button class="mobile-menu" onclick="toggleMenu()">☰</button>
 
