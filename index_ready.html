@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <link rel="apple-touch-icon" href="09CD819B-17A1-421A-AF67-D287666BC4DC.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ملف الإنجاز المهني - مريم شوعي محمد حكمي</title>
+
+<style>
+:root{
+  --green:#075b45;
+  --green-dark:#034737;
+  --gold:#b88a32;
+  --gold-light:#d8ba72;
+  --cream:#f8f1e5;
+  --cream-light:#fffaf3;
+  --border:#e4d5bb;
+  --text:#15483a;
+  --shadow:0 8px 22px rgba(73,52,20,.10);
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  font-family:Tahoma,Arial,sans-serif;
+  color:var(--text);
+  background-color:var(--cream);
+
+  /* نقوش هادئة بالخلفية */
+  background-image:
+    radial-gradient(circle at 10% 12%,rgba(184,138,50,.07),transparent 22%),
+    radial-gradient(circle at 90% 25%,rgba(7,91,69,.05),transparent 22%),
+    repeating-linear-gradient(
+      45deg,
+      rgba(184,138,50,.025) 0,
+      rgba(184,138,50,.025) 1px,
+      transparent 1px,
+      transparent 30px
+    );
+}
+
+button,input{
+  font-family:inherit;
+}
+
+.layout{
+  min-height:100vh;
+  display:flex;
+}
+
+/* القائمة الجانبية */
+
+.sidebar{
+  width:235px;
+  height:100vh;
+  position:sticky;
+  top:0;
+  overflow-y:auto;
+  flex-shrink:0;
+
+  background:linear-gradient(180deg,var(--green),var(--green-dark));
+  color:white;
+
+  padding:15px 11px 30px;
+  box-shadow:-6px 0 22px rgba(0,0,0,.16);
+  z-index:60;
+}
+
+.side-top{
+  text-align:center;
+  border:1px solid var(--gold-light);
+  padding:15px 8px;
+  margin-bottom:15px;
+  line-height:1.8;
+  font-size:16px;
+}
+
+.side-top .symbol{
+  color:var(--gold-light);
+  font-size:27px;
+}
+
+.nav-item{
+  display:flex;
+  align-items:center;
+  gap:9px;
+
+  padding:10px 9px;
+  margin:3px 0;
+
+  border-radius:12px;
+  cursor:pointer;
+  transition:.2s;
+  font-size:15px;
+}
+
+.nav-item:hover,
+.nav-item.active{
+  background:linear-gradient(90deg,#c59842,#aa7c2a);
+}
+
+.nav-icon{
+  width:27px;
+  text-align:center;
+  color:#f0ca68;
+  font-size:19px;
+}
+
+/* المحتوى */
+
+.main{
+  flex:1;
+  max-width:1000px;
+  margin:auto;
+  padding:20px 30px 25px;
+}
+
+/* الشعارات */
+
+.logos{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  margin-bottom:8px;
+}
+
+.vision{
+  text-align:center;
+  color:#59615d;
+}
+
+.vision .small{
+  font-size:13px;
+}
+
+.vision .big{
+  font-size:38px;
+  letter-spacing:3px;
+  font-weight:bold;
+}
+
+.moe{
+  text-align:center;
+  color:#138d87;
+  font-weight:bold;
+  font-size:20px;
+}
+
+.moe-dots{
+  letter-spacing:3px;
+  font-size:24px;
+}
+
+/* أعلى الملف */
+
+.hero{
+  position:relative;
+  text-align:center;
+  padding-top:20px;
+}
+
+.children-area{
+  width:185px;
+  height:155px;
+  margin:0 auto 4px;
+
+  border-radius:80px 80px 20px 20px;
+  border:1px dashed rgba(184,138,50,.35);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:rgba(255,255,255,.28);
+  color:#9d8351;
+
+  box-shadow:0 8px 20px rgba(0,0,0,.04);
+  overflow:hidden;
+}
+
+.children-area span{
+  font-size:14px;
+  line-height:1.7;
+}
+
+.main-title{
+  color:var(--green);
+  font-size:43px;
+  margin:7px 0;
+}
+
+.gold-line{
+  width:190px;
+  height:1px;
+  margin:8px auto 14px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+}
+
+.teacher-name{
+  color:var(--gold);
+  font-size:33px;
+  font-weight:bold;
+  margin-bottom:6px;
+}
+
+.job-title{
+  color:var(--green);
+  font-size:24px;
+}
+
+/* صورة المعلمة */
+
+.photo-card{
+  position:absolute;
+  left:0;
+  top:55px;
+
+  width:168px;
+  padding:16px;
+
+  background:rgba(255,255,255,.58);
+  border:1px solid var(--border);
+  border-radius:20px;
+  box-shadow:var(--shadow);
+}
+
+.photo-circle{
+  width:100px;
+  height:100px;
+  border-radius:50%;
+
+  display:grid;
+  place-items:center;
+
+  margin:0 auto 10px;
+
+  background:#f1e4ce;
+  border:1px solid #ddc7a3;
+
+  font-size:37px;
+}
+
+.photo-card strong{
+  display:block;
+  line-height:1.7;
+}
+
+.btn{
+  border:1px solid var(--green);
+  background:#fffaf2;
+  color:var(--green);
+
+  padding:9px 17px;
+  border-radius:24px;
+  cursor:pointer;
+
+  margin-top:9px;
+}
+
+.btn:hover{
+  background:var(--green);
+  color:white;
+}
+
+/* بيانات المعلمة */
+
+.details{
+  max-width:690px;
+  margin:20px auto 10px;
+
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+
+  border:1px solid var(--border);
+  border-radius:14px;
+  overflow:hidden;
+
+  background:rgba(255,255,255,.37);
+}
+
+.detail{
+  padding:10px 14px;
+  min-width:135px;
+  text-align:center;
+  border-left:1px solid var(--border);
+}
+
+.contact{
+  width:max-content;
+  max-width:90%;
+  margin:12px auto;
+
+  border:1px solid var(--border);
+  border-radius:25px;
+
+  padding:10px 25px;
+  background:rgba(255,255,255,.42);
+}
+
+/* الرؤية والرسالة والقيم */
+
+.philosophy{
+  margin:25px 0;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+
+.ph-card{
+  padding:18px;
+  text-align:center;
+
+  border:1px solid var(--border);
+  border-radius:18px;
+
+  background:rgba(255,255,255,.56);
+  box-shadow:0 6px 15px rgba(0,0,0,.05);
+
+  cursor:pointer;
+}
+
+.ph-icon{
+  font-size:30px;
+  color:var(--gold);
+}
+
+.ph-card h3{
+  color:var(--green);
+  margin:8px 0;
+}
+
+.ph-card p{
+  font-size:14px;
+  line-height:1.8;
+  margin:0;
+}
+
+/* عبارة تربوية */
+
+.quote{
+  max-width:620px;
+  margin:24px auto;
+
+  background:rgba(255,255,255,.5);
+  border:1px solid var(--border);
+  border-radius:18px;
+
+  padding:20px 25px;
+
+  line-height:2;
+  font-size:16px;
+  text-align:center;
+
+  box-shadow:0 5px 15px rgba(0,0,0,.05);
+}
+
+/* الزهور والكتب */
+
+.decor{
+  direction:ltr;
+  display:flex;
+  align-items:flex-end;
+  margin:4px 0 -10px;
+}
+
+.vase{
+  width:115px;
+  height:130px;
+
+  border-radius:45% 45% 25% 25%;
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #eee1cf 0 8px,
+      #fff8ed 8px 15px
+    );
+
+  position:relative;
+
+  box-shadow:0 15px 17px rgba(0,0,0,.14);
+}
+
+.vase:before{
+  content:"✿ ✿ ✿ ✿ ✿";
+  position:absolute;
+  width:185px;
+
+  left:-32px;
+  top:-70px;
+
+  color:#c6a56d;
+  font-size:26px;
+  line-height:1.25;
+}
+
+.books{
+  width:155px;
+  margin-left:-2px;
+}
+
+.book{
+  height:19px;
+  border-radius:3px;
+  margin:2px;
+  box-shadow:0 5px 8px rgba(0,0,0,.11);
+}
+
+.book:nth-child(1){
+  width:145px;
+  background:#65785e;
+}
+
+.book:nth-child(2){
+  width:133px;
+  background:#ceb789;
+}
+
+.book:nth-child(3){
+  width:153px;
+  background:#f3e7d2;
+}
+
+/* عنوان الأقسام */
+
+.section-title{
+  text-align:center;
+  color:var(--green);
+  font-size:24px;
+  margin:27px 0 17px;
+}
+
+.section-title:before,
+.section-title:after{
+  content:"";
+  display:inline-block;
+
+  width:58px;
+  height:1px;
+
+  background:var(--gold);
+  vertical-align:middle;
+
+  margin:0 12px;
+}
+
+/* البطاقات */
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+}
+
+.card{
+  min-height:185px;
+
+  padding:16px 10px;
+
+  background:rgba(255,250,242,.92);
+  border:1px solid var(--border);
+  border-radius:16px;
+
+  box-shadow:0 6px 16px rgba(0,0,0,.065);
+
+  text-align:center;
+  cursor:pointer;
+
+  transition:.2s;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 11px 23px rgba(0,0,0,.11);
+}
+
+.card-icon{
+  width:65px;
+  height:65px;
+
+  border-radius:50%;
+  margin:auto;
+
+  display:grid;
+  place-items:center;
+
+  background:#f1e6d4;
+  border:1px solid #e8d4b1;
+
+  font-size:29px;
+  color:var(--green);
+}
+
+.card h3{
+  font-size:17px;
+  color:var(--green);
+  margin:10px 0 5px;
+}
+
+.card p{
+  margin:0;
+  font-size:13px;
+  line-height:1.7;
+}
+
+/* الإضافة السريعة */
+
+.quick{
+  margin-top:18px;
+  padding:15px;
+
+  border:1px solid var(--border);
+  border-radius:17px;
+
+  background:rgba(255,255,255,.28);
+}
+
+.quick-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:8px;
+}
+
+.quick-btn{
+  min-height:92px;
+
+  border:1px dashed #cfb688;
+  border-radius:12px;
+
+  padding:12px 5px;
+
+  background:#fffaf2;
+  text-align:center;
+
+  cursor:pointer;
+}
+
+.quick-btn span{
+  display:block;
+  font-size:27px;
+  margin-bottom:6px;
+}
+
+/* نافذة الأقسام */
+
+.modal{
+  display:none;
+
+  position:fixed;
+  inset:0;
+
+  z-index:100;
+
+  padding:18px;
+
+  background:rgba(0,0,0,.53);
+}
+
+.modal-box{
+  max-width:680px;
+  max-height:85vh;
+
+  overflow:auto;
+
+  margin:6vh auto;
+
+  padding:22px;
+
+  background:var(--cream);
+  border-radius:20px;
+
+  box-shadow:0 25px 60px rgba(0,0,0,.28);
+}
+
+.modal-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding-bottom:10px;
+
+  border-bottom:1px solid var(--border);
+}
+
+.modal-head h2{
+  margin:0;
+  color:var(--green);
+}
+
+.close{
+  width:38px;
+  height:38px;
+
+  border:0;
+  border-radius:50%;
+
+  background:var(--green);
+  color:white;
+
+  cursor:pointer;
+}
+
+.section-body{
+  padding:15px 0;
+  line-height:1.8;
+}
+
+.upload{
+  margin-top:15px;
+  padding:20px;
+
+  border:2px dashed #cab385;
+  border-radius:15px;
+
+  background:#fffaf2;
+  text-align:center;
+}
+
+.action{
+  margin-top:12px;
+
+  border:0;
+  border-radius:20px;
+
+  background:var(--green);
+  color:white;
+
+  padding:9px 18px;
+  cursor:pointer;
+}
+
+/* الجوال */
+
+.mobile-menu{
+  display:none;
+}
+
+@media(max-width:800px){
+
+  .sidebar{
+    position:fixed;
+    right:-255px;
+    transition:.25s;
+  }
+
+  .sidebar.open{
+    right:0;
+  }
+
+  .mobile-menu{
+    display:block;
+
+    position:fixed;
+    top:18px;
+    right:15px;
+
+    z-index:80;
+
+    width:52px;
+    height:52px;
+
+    border:0;
+    border-radius:50%;
+
+    background:var(--green);
+    color:white;
+
+    font-size:24px;
+
+    box-shadow:0 8px 16px rgba(0,0,0,.16);
+  }
+
+  .main{
+    width:100%;
+    padding:15px 12px 25px;
+  }
+
+  .logos{
+    padding:0 7px;
+  }
+
+  .vision .big{
+    font-size:27px;
+  }
+
+  .moe{
+    font-size:16px;
+  }
+
+  .children-area{
+    margin-top:25px;
+    width:150px;
+    height:120px;
+  }
+
+  .main-title{
+    font-size:31px;
+  }
+
+  .teacher-name{
+    font-size:25px;
+  }
+
+  .job-title{
+    font-size:20px;
+  }
+
+  .photo-card{
+    position:relative;
+
+    left:auto;
+    top:auto;
+
+    width:180px;
+    margin:18px auto;
+  }
+
+  .details{
+    border:0;
+    background:transparent;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    gap:8px;
+  }
+
+  .detail{
+    border:1px solid var(--border);
+    border-radius:13px;
+    background:rgba(255,255,255,.47);
+  }
+
+  .philosophy{
+    grid-template-columns:1fr;
+  }
+
+  .decor{
+    transform:scale(.78);
+    transform-origin:left bottom;
+  }
+
+  .grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+  }
+
+  .card{
+    min-height:168px;
+    padding:13px 7px;
+  }
+
+  .card-icon{
+    width:57px;
+    height:57px;
+    font-size:25px;
+  }
+
+  .card h3{
+    font-size:15px;
+  }
+
+  .card p{
+    font-size:12px;
+  }
+
+  .quick-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+footer{
+  text-align:center;
+  color:#776e60;
+  padding:20px 5px;
+  font-size:12px;
+}
+</style>
+</head>
+
+<body>
+<div id="welcomeCover" style="
+position:fixed;
+inset:0;
+z-index:99999;
+background:#f8f1e5;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+">
+
+  <img src="portfolio-cover.jpeg"
+       alt="ملف الإنجاز المهني"
+       style="
+       width:100%;
+       height:100%;
+object-fit:cover;
+    object-position:20% center;
+       display:block;
+       ">
+
+  <button onclick="document.getElementById('welcomeCover').style.display='none';"
+          style="
+          position:absolute;
+          bottom:12px;
+          left:50%;
+          transform:translateX(-50%);
+          padding:10px 24px;
+          border:none;
+          border-radius:30px;
+          background:#075b45;
+          color:white;
+          font-size:16px;
+          font-family:inherit;
+          box-shadow:0 6px 18px rgba(0,0,0,.18);
+          ">
+    الدخول إلى ملف الإنجاز
+  </button>
+
+</div>
+<button class="mobile-menu" onclick="toggleMenu()">☰</button>
+
+<div class="layout">
+
+<aside class="sidebar" id="sidebar">
+
+  <div class="side-top">
+    <div class="symbol">✦</div>
+    معًا نحو تعليم<br>
+    متميز لمستقبل<br>
+    واعد
+  </div>
+
+  <div class="nav-item active" onclick="goHome()">
+    <span class="nav-icon">⌂</span>الرئيسية
+  </div>
+
+  <div class="nav-item" onclick="openSection('الملف الشخصي')">
+    <span class="nav-icon">♙</span>الملف الشخصي
+  </div>
+
+  <div class="nav-item" onclick="openSection('الرؤية')">
+    <span class="nav-icon">🌿</span>الرؤية
+  </div>
+
+  <div class="nav-item" onclick="openSection('الرسالة')">
+    <span class="nav-icon">✦</span>الرسالة
+  </div>
+
+  <div class="nav-item" onclick="openSection('القيم')">
+    <span class="nav-icon">♡</span>القيم
+  </div>
+
+  <div class="nav-item" onclick="openSection('الأهداف المهنية')">
+    <span class="nav-icon">◎</span>الأهداف المهنية
+  </div>
+
+  <div class="nav-item" onclick="openSection('المؤهلات والخبرات')">
+    <span class="nav-icon">◇</span>المؤهلات والخبرات
+  </div>
+
+  <div class="nav-item" onclick="openSection('التطوير المهني')">
+    <span class="nav-icon">▣</span>التطوير المهني
+  </div>
+
+  <div class="nav-item" onclick="openSection('الخطط والتحضير')">
+    <span class="nav-icon">▤</span>الخطط والتحضير
+  </div>
+
+  <div class="nav-item" onclick="openSection('الأنشطة والاستراتيجيات')">
+    <span class="nav-icon">✥</span>الأنشطة والاستراتيجيات
+  </div>
+
+  <div class="nav-item" onclick="openSection('إنجازات الأطفال')">
+    <span class="nav-icon">☆</span>إنجازات الأطفال
+  </div>
+
+  <div class="nav-item" onclick="openSection('متابعة وتقييم الأطفال')">
+    <span class="nav-icon">✓</span>متابعة وتقييم الأطفال
+  </div>
+
+  <div class="nav-item" onclick="openSection('الملاحظات الخاصة بالأطفال')">
+    <span class="nav-icon">▧</span>الملاحظات الخاصة بالأطفال
+  </div>
+
+  <div class="nav-item" onclick="openSection('التوجيه الصحي')">
+    <span class="nav-icon">♡</span>التوجيه الصحي
+  </div>
+
+  <div class="nav-item" onclick="openSection('الشراكة مع الأسرة')">
+    <span class="nav-icon">♧</span>الشراكة مع الأسرة
+  </div>
+
+  <div class="nav-item" onclick="openSection('الإنجازات المهنية')">
+    <span class="nav-icon">♕</span>الإنجازات المهنية
+  </div>
+
+  <div class="nav-item" onclick="openSection('التقارير')">
+    <span class="nav-icon">▤</span>التقارير
+  </div>
+
+  <div class="nav-item" onclick="openSection('معرض الصور والشواهد')">
+    <span class="nav-icon">▧</span>معرض الصور والشواهد
+  </div>
+
+  <div class="nav-item" onclick="openSection('الشهادات والأدلة')">
+    <span class="nav-icon">◇</span>الشهادات والأدلة
+  </div>
+
+  <div class="nav-item" onclick="openSection('الفعاليات والمبادرات')">
+    <span class="nav-icon">✦</span>الفعاليات والمبادرات
+  </div>
+
+  <div class="nav-item" onclick="openSection('التواصل')">
+    <span class="nav-icon">✉</span>التواصل
+  </div>
+
+  <div class="nav-item" onclick="openSection('إعدادات الملف')">
+    <span class="nav-icon">⚙</span>إعدادات الملف
+  </div>
+
+</aside>
+
+<main class="main">
+
+  <div class="logos">
+
+    <div class="vision">
+      <div class="small">رؤية</div>
+      <div class="big">2030</div>
+      <div class="small">المملكة العربية السعودية</div>
+    </div>
+
+    <div class="moe">
+      <div class="moe-dots">••••••••</div>
+      وزارة التعليم
+      <br>
+      <small>Ministry of Education</small>
+    </div>
+
+  </div>
+
+  <section class="hero">
+
+
+    <div class="children-area">
+  <img src="2A574709-671B-4B85-ABA5-BA71229B93D6.png" alt="صورة الأطفال" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">
+</div>
+
+    <h1 class="main-title">ملف الإنجاز المهني</h1>
+
+    <div class="gold-line"></div>
+
+    <div class="teacher-name">
+      مريم شوعي محمد حكمي
+    </div>
+
+    <div class="job-title">
+      معلمة رياض أطفال
+    </div>
+
+    <div class="photo-card">
+
+<div class="photo-circle" style="width:140px;height:140px;border-radius:50%;overflow:hidden;margin:auto;"><img src="6766C253-FBAF-44F6-9BE8-334316F49ACB.png" alt="الصورة الشخصية" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;"></div>
+
+      <strong>
+        أضف صورتك الشخصية
+      </strong>
+
+      <button class="btn" onclick="openSection('الصورة الشخصية')">
+        إضافة صورة
+      </button>
+
+    </div>
+
+    <button class="btn" onclick="openSection('تعديل البيانات')">
+      ✎ تعديل البيانات
+    </button>
+
+    <div class="details">
+
+      <div class="detail">
+        المستوى الثالث
+      </div>
+
+      <div class="detail">
+        روضة الجرادية
+      </div>
+
+      <div class="detail">
+        جازان / صامطة
+      </div>
+
+      <div class="detail">
+        خبرة 15 سنة
+      </div>
+
+    </div>
+
+    <div class="contact">
+      بيانات التواصل
+    </div>
+
+  </section>
+
+  <section class="philosophy">
+
+    <div class="ph-card" onclick="openSection('الرؤية')">
+
+      <div class="ph-icon">🌿</div>
+
+      <h3>الرؤية</h3>
+
+      <p>
+        بيئة تعليمية متميزة تنمي شخصية الطفل
+        وقدراته وتدعم تعلمه وإبداعه.
+      </p>
+
+    </div>
+
+    <div class="ph-card" onclick="openSection('الرسالة')">
+
+      <div class="ph-icon">✦</div>
+
+      <h3>الرسالة</h3>
+
+      <p>
+        تقديم خبرات تعليمية آمنة ومحفزة
+        تراعي احتياجات الطفل وتدعم نموه الشامل.
+      </p>
+
+    </div>
+
+    <div class="ph-card" onclick="openSection('القيم')">
+
+      <div class="ph-icon">♡</div>
+
+      <h3>القيم</h3>
+
+      <p>
+        الحب • الاحترام • المسؤولية • الإبداع
+        • التعاون • الأمانة.
+      </p>
+
+    </div>
+
+  </section>
+
+  <div class="quote">
+    الطفل هو محور العملية التعليمية، وهدفي أن أنمي قدراته
+    وأبني شخصيته في بيئة آمنة ومحفزة مليئة بالحب والتعلم.
+  </div>
+
+  <div class="decor">
+
+    <div class="vase"></div>
+
+    <div class="books">
+      <div class="book"></div>
+      <div class="book"></div>
+      <div class="book"></div>
+    </div>
+
+  </div>
+
+  <h2 class="section-title">
+    الأقسام الرئيسية
+  </h2>
+
+  <section class="grid">
+
+    <div class="card" onclick="openSection('إنجازات الأطفال')">
+      <div class="card-icon">☆</div>
+      <h3>إنجازات الأطفال</h3>
+      <p>أعمال ومشاركات وإنجازات الأطفال</p>
+    </div>
+
+    <div class="card" onclick="openSection('متابعة وتقييم الأطفال')">
+      <div class="card-icon">✓</div>
+      <h3>متابعة وتقييم الأطفال</h3>
+      <p>متابعة النمو والتطور وتقييم المهارات</p>
+    </div>
+
+    <div class="card" onclick="openSection('الملاحظات الخاصة بالأطفال')">
+      <div class="card-icon">▧</div>
+      <h3>الملاحظات الخاصة بالأطفال</h3>
+      <p>الملاحظات والمتابعة والتواصل مع الأسرة</p>
+    </div>
+
+    <div class="card" onclick="openSection('التوجيه الصحي')">
+      <div class="card-icon">♡</div>
+      <h3>التوجيه الصحي</h3>
+      <p>التوعية الصحية والسلامة والغذاء والنظافة</p>
+    </div>
+
+    <div class="card" onclick="openSection('الخطط والتحضير')">
+      <div class="card-icon">▤</div>
+      <h3>الخطط والتحضير</h3>
+      <p>الخطة السنوية والأسبوعية والتحضير اليومي</p>
+    </div>
+
+    <div class="card" onclick="openSection('الأنشطة والاستراتيجيات')">
+      <div class="card-icon">✥</div>
+      <h3>الأنشطة والاستراتيجيات</h3>
+      <p>الأنشطة التعليمية واستراتيجيات التعلم</p>
+    </div>
+
+    <div class="card" onclick="openSection('الشراكة مع الأسرة')">
+      <div class="card-icon">♧</div>
+      <h3>الشراكة مع الأسرة</h3>
+      <p>التواصل والمشاركة والشراكة المجتمعية</p>
+    </div>
+
+    <div class="card" onclick="openSection('الإنجازات المهنية')">
+      <div class="card-icon">♕</div>
+      <h3>الإنجازات المهنية</h3>
+      <p>إنجازات المعلمة وشهادات الشكر والجوائز</p>
+    </div>
+
+    <div class="card" onclick="openSection('معرض الصور')">
+      <div class="card-icon">▧</div>
+      <h3>معرض الصور</h3>
+      <p>صور الأنشطة والفعاليات وأعمال الأطفال</p>
+    </div>
+
+    <div class="card" onclick="openSection('الشهادات والأدلة')">
+      <div class="card-icon">◇</div>
+      <h3>الشهادات والأدلة</h3>
+      <p>الشهادات والشواهد والملفات والتقارير</p>
+    </div>
+
+    <div class="card" onclick="openSection('الفعاليات والمبادرات')">
+      <div class="card-icon">✦</div>
+      <h3>الفعاليات والمبادرات</h3>
+      <p>المناسبات والبرامج والمبادرات المنفذة</p>
+    </div>
+
+    <div class="card" onclick="openSection('التواصل')">
+      <div class="card-icon">✉</div>
+      <h3>التواصل</h3>
+      <p>بيانات التواصل مع المعلمة والروضة</p>
+    </div>
+
+  </section>
+
+  <section class="quick">
+
+    <h3 class="section-title">
+      إضافة سريعة
+    </h3>
+
+    <div class="quick-grid">
+
+      <div class="quick-btn" onclick="openSection('إضافة ملف PDF')">
+        <span>▤</span>
+        إضافة ملف / PDF
+      </div>
+
+      <div class="quick-btn" onclick="openSection('إضافة شهادة')">
+        <span>◇</span>
+        إضافة شهادة أو صورة
+      </div>
+
+      <div class="quick-btn" onclick="openSection('إضافة صور')">
+        <span>▧</span>
+        إضافة صورة أو أكثر
+      </div>
+
+      <div class="quick-btn" onclick="openSection('إضافة خطة')">
+        <span>▤</span>
+        إضافة خطة أو تحضير
+      </div>
+
+      <div class="quick-btn" onclick="openSection('إضافة تقرير')">
+        <span>✓</span>
+        إضافة تقرير أو ملاحظة
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+    جميع الحقوق محفوظة ©
+    ملف إنجاز المعلمة /
+    مريم شوعي محمد حكمي
+  </footer>
+
+</main>
+
+</div>
+
+<div class="modal" id="modal">
+
+  <div class="modal-box">
+
+    <div class="modal-head">
+
+      <h2 id="modalTitle"></h2>
+
+      <button class="close" onclick="closeModal()">
+        ×
+      </button>
+
+    </div>
+
+    <div class="section-body">
+
+      <p>
+        هذا القسم مستقل عن بقية الأقسام.
+        ويمكن وضع صوره وملفاته وشواهده الخاصة دون تداخل مع الأقسام الأخرى.
+      </p>
+
+      <div class="upload">
+
+        <strong>
+          إضافة ملف أو صورة
+        </strong>
+
+        <br><br>
+
+        <input type="file" id="fileInput" multiple>
+
+        <br>
+
+        <button class="action" onclick="demoSave()">
+          حفظ
+        </button>
+
+      </div>
+
+      <div class="upload" style="margin-top:18px;text-align:right">
+        <strong style="color:var(--green);font-size:18px">اعتماد وملاحظات الإدارة</strong>
+        <p style="margin:8px 0 10px;font-size:13px">يمكن للمديرة كتابة ملاحظة على هذا القسم وإضافة التوقيع والختم.</p>
+        <textarea id="adminNote" placeholder="ملاحظات المديرة على هذا القسم" style="width:100%;min-height:90px;padding:10px;border:1px solid var(--border);border-radius:12px;font-family:inherit;resize:vertical"></textarea>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px">
+          <label class="btn" style="text-align:center;margin:0">إضافة التوقيع<input id="signatureInput" type="file" accept="image/*" hidden></label>
+          <label class="btn" style="text-align:center;margin:0">إضافة الختم<input id="stampInput" type="file" accept="image/*" hidden></label>
+        </div>
+        <div id="adminPreview" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px"></div>
+        <button class="action" onclick="saveAdminReview()">حفظ اعتماد المديرة</button>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+
+function toggleMenu(){
+  document
+    .getElementById("sidebar")
+    .classList
+    .toggle("open");
+}
+
+function openSection(name){
+
+  document
+    .getElementById("modalTitle")
+    .textContent=name;
+
+  document
+    .getElementById("modal")
+    .style.display="block";
+
+  if(window.innerWidth<=800){
+    document
+      .getElementById("sidebar")
+      .classList
+      .remove("open");
+  }
+}
+
+function closeModal(){
+  document
+    .getElementById("modal")
+    .style.display="none";
+}
+
+function goHome(){
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+}
+
+function demoSave(){
+
+  const files=
+    document
+      .getElementById("fileInput")
+      .files;
+
+  if(files.length===0){
+    alert("اختاري ملفًا أو صورة أولًا");
+    return;
+  }
+
+  alert(
+    "تم اختيار "+
+    files.length+
+    " ملف/ملفات ✅"
+  );
+}
+
+
+let currentSectionName="";
+const originalOpenSection=openSection;
+openSection=function(name){
+  currentSectionName=name;
+  originalOpenSection(name);
+  loadAdminReview();
+};
+function fileToDataURL(file, cb){
+  if(!file){ cb(""); return; }
+  const r=new FileReader(); r.onload=()=>cb(r.result); r.readAsDataURL(file);
+}
+function loadAdminReview(){
+  const key="adminReview:"+currentSectionName;
+  const data=JSON.parse(localStorage.getItem(key)||"{}");
+  const note=document.getElementById("adminNote"); if(note) note.value=data.note||"";
+  renderAdminPreview(data.signature||"",data.stamp||"");
+}
+function renderAdminPreview(signature,stamp){
+  const box=document.getElementById("adminPreview"); if(!box) return; box.innerHTML="";
+  [[signature,"التوقيع"],[stamp,"الختم"]].forEach(([src,label])=>{if(src){const d=document.createElement("div");d.style.textAlign="center";d.innerHTML=`<img src="${src}" alt="${label}" style="max-width:120px;max-height:90px;object-fit:contain;display:block"><small>${label}</small>`;box.appendChild(d);}});
+}
+function saveAdminReview(){
+  const note=document.getElementById("adminNote").value;
+  const sig=document.getElementById("signatureInput").files[0];
+  const stamp=document.getElementById("stampInput").files[0];
+  const old=JSON.parse(localStorage.getItem("adminReview:"+currentSectionName)||"{}");
+  fileToDataURL(sig,signature=>fileToDataURL(stamp,stampData=>{
+    const data={note,signature:signature||old.signature||"",stamp:stampData||old.stamp||"",savedAt:new Date().toLocaleString("ar-SA")};
+    localStorage.setItem("adminReview:"+currentSectionName,JSON.stringify(data)); renderAdminPreview(data.signature,data.stamp); alert("تم حفظ ملاحظة واعتماد المديرة ✅");
+  }));
+}
+
+window.onclick=function(event){
+
+  const modal=
+    document
+      .getElementById("modal");
+
+  if(event.target===modal){
+    closeModal();
+  }
+};
+
+</script>
+
+</body>
+</html>
